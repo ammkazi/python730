@@ -1,5 +1,16 @@
-fname = input("Enter first name ")
-lname = input("Enter last name ")
-fullname = fname + " " + lname
-# adding two strings is called = string concatenation
-print("Hello", fullname)
+import pandas as pd
+
+data = pd.read_csv("titanic.csv")
+#print(data)
+
+print(data.info())
+
+issues_summary = {
+    "Shape": data.shape,
+    "Missing_Values": data.isnull().sum(),
+    "Duplicate_Rows": data.duplicated().sum(),
+    "Data_Types": data.dtypes,
+    "Sample_Records": data.head(3)
+}
+
+print(issues_summary)

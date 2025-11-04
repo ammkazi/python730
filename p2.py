@@ -1,12 +1,4 @@
-a = 10
-b = 3
+import pandas as pd
 
-# True - False
-# relational operator (6)
-# < <= > >= == !=
-print(a>b)
-print(a>=b)
-print(a<b)
-print(a<=b)
-print(a==b)
-print(a!=b)
+data = pd.read_excel("data.xlsx")
+print(data)
